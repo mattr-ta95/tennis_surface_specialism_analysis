@@ -42,7 +42,7 @@ def create_match_records(df: pd.DataFrame) -> pd.DataFrame:
     winners['won'] = 1
 
     # Loser records
-    losers = df[['loser_id', 'loser_name', 'loser_age', 'surface', 'year', 'date']].copy()
+    losers = df[['loser_id', 'loser_name', 'loser_age', 'surface', 'year', 'tourney_date']].copy()
     losers.columns = ['player_id', 'player_name', 'age', 'surface', 'year', 'date']
     losers['won'] = 0
 
